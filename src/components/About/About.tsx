@@ -1,5 +1,5 @@
 import s from "./About.module.scss";
-import myMemoji from "../../assets/images/image-aboutme.PNG";
+import myEmoji from "../../assets/images/image-aboutme.png";
 import Section from "../Section/Section";
 import AnimatedLetters from "../../ui/AnimatedLetters/AnimatedLetters";
 
@@ -29,7 +29,7 @@ export default function About() {
         </div>
 
         <div className={s["about__image"]}>
-          <img src={myMemoji} alt="Marat portrait" loading="lazy" />
+          <img src={myEmoji} alt="Marat portrait" loading="lazy" />
         </div>
       </div>
     </Section>
