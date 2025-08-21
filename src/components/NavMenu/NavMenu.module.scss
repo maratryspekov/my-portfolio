@@ -1,0 +1,350 @@
+// SASS переменные
+$main-menu_width: 6rem;
+$background_color: #08fdd8;
+$accent-color: #08fdd8;
+$violet-color: #7400b8;
+
+.main-menu {
+  width: 100%;
+  min-height: -webkit-fill-available;
+  max-width: 6rem;
+  position: fixed;
+  z-index: 101;
+  left: 0;
+  top: 0;
+  background-color: #181818;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: left 0.3s ease;
+
+  @media (max-width: 767px) {
+    max-width: 8rem;
+    left: -8rem;
+  }
+
+  &__burger {
+    width: 3rem;
+    height: 3rem;
+    background-color: rgb(29, 29, 29);
+    border: 1px solid #08fdd8;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 11;
+    right: -4rem;
+    top: 1rem;
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    &-background {
+      width: 100vw;
+      min-height: 100vh;
+      min-height: -webkit-fill-available;
+      background-color: rgba(0, 0, 0, 0.7);
+      position: absolute;
+      z-index: 10;
+      right: -100vw; /* прячем за экран */
+      top: 0;
+      display: none;
+    }
+
+    span {
+      width: 1.5rem;
+      height: 2px;
+      background-color: #08fdd8;
+      position: absolute;
+      transition: background-color 0.2s ease;
+    }
+    span::after,
+    span::before {
+      content: "";
+      width: 1.5rem;
+      height: 2px;
+      background-color: #08fdd8;
+      position: absolute;
+      z-index: 3;
+      border-radius: 16px;
+      transform: rotate(0);
+      transition: all 0.3s ease;
+    }
+    span::before {
+      bottom: 0.5rem;
+    }
+    span::after {
+      top: 0.5rem;
+    }
+  }
+
+  &__top {
+    width: 100%;
+    padding: 2rem;
+    background-color: #000;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+
+    &-img {
+      width: 6rem;
+      height: 6rem;
+      background-image: url("../../assets//images/image-logo.JPG");
+      background-size: cover;
+      background-position-x: right;
+      border-radius: 50%;
+    }
+  }
+
+  &__navigation {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 7rem;
+
+    &-item {
+      width: 100%;
+      padding: 1rem;
+      font-size: 0.8rem;
+      box-sizing: border-box;
+      text-decoration: none;
+      color: inherit;
+      border-top: 1px solid #2d2d2d;
+      text-align: center;
+      text-transform: uppercase;
+      transition: color 0.1s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      svg {
+        fill: white;
+        width: 1.2rem;
+        height: 1.3rem;
+        transition: all 0.2s ease-out 0s;
+      }
+
+      p {
+        text-transform: uppercase;
+        position: absolute;
+        text-align: center;
+        opacity: 0;
+        letter-spacing: 1px;
+        transition: all 0.4s ease-out 0s;
+        font-size: 0.8rem;
+      }
+
+      &:last-child {
+        border-bottom: 1px solid #2d2d2d;
+      }
+
+      &:hover {
+        background-color: #2d2d2d;
+        color: #08fdd8;
+      }
+      &:hover svg {
+        fill: #08fdd8;
+        opacity: 0;
+      }
+      &:hover p {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+
+    &-item {
+      margin-bottom: 0.5rem;
+
+      p {
+        display: none;
+      }
+    }
+
+    .hexagon {
+      position: relative;
+      width: 20px;
+      height: 11.55px;
+      background-color: white;
+      margin: 5.77px 0;
+      transition: background-color 0.3s ease;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        width: 11px;
+        height: 11px;
+        fill: black !important;
+        color: black !important;
+      }
+
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        width: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        transition: border-color 0.3s ease;
+      }
+
+      &:before {
+        bottom: 100%;
+        border-bottom: 5.77px solid white;
+      }
+      &:after {
+        top: 100%;
+        width: 0;
+        border-top: 5.77px solid white;
+      }
+    }
+
+    .instagram-link {
+      svg {
+        width: 13px;
+        height: 13px;
+      }
+    }
+
+    .github-link:hover {
+      background-color: #7400b8;
+      &:before {
+        border-bottom-color: #7400b8;
+      }
+      &:after {
+        border-top-color: #7400b8;
+      }
+      svg {
+        fill: black !important;
+        color: black !important;
+      }
+    }
+
+    .linkedin-link:hover {
+      background-color: #5390d9;
+      &:before {
+        border-bottom-color: #5390d9;
+      }
+      &:after {
+        border-top-color: #5390d9;
+      }
+      svg {
+        fill: black !important;
+        color: black !important;
+      }
+    }
+
+    .instagram-link:hover {
+      background-color: #08fdd8;
+      &:before {
+        border-bottom-color: #08fdd8;
+      }
+      &:after {
+        border-top-color: #08fdd8;
+      }
+      svg {
+        fill: black !important;
+        color: black !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .main-menu {
+    left: -8rem;
+    max-width: 8rem;
+
+    &__burger {
+      display: flex;
+    }
+
+    &--active {
+      left: 0;
+
+      .main-menu__burger {
+        span {
+          background-color: transparent;
+        }
+        span::before {
+          transform: rotate(-45deg);
+          bottom: 0;
+        }
+        span::after {
+          transform: rotate(45deg);
+          top: 0;
+        }
+      }
+
+      .main-menu__burger-background {
+        display: block;
+      }
+    }
+
+    &__navigation {
+      margin-top: 0;
+    }
+
+    &__links {
+      flex-direction: row;
+
+      &-item {
+        margin: 0.35rem 0 0.35rem 1rem;
+
+        a {
+          display: flex;
+          justify-content: flex-start;
+          align-items: baseline;
+        }
+      }
+
+      .github-link {
+        background-color: #7400b8;
+        &:before {
+          border-bottom-color: #7400b8;
+        }
+        &:after {
+          border-top-color: #7400b8;
+        }
+      }
+      .linkedin-link {
+        background-color: #5390d9;
+        &:before {
+          border-bottom-color: #5390d9;
+        }
+        &:after {
+          border-top-color: #5390d9;
+        }
+      }
+      .instagram-link {
+        background-color: #08fdd8;
+        &:before {
+          border-bottom-color: #08fdd8;
+        }
+        &:after {
+          border-top-color: #08fdd8;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 374px) {
+  .main-menu {
+    &__top {
+      padding: 1rem 2rem;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.container {
+  padding-left: 6rem;
+  min-width: 320px;
+  display: block;
+  position: relative;
+
+  @media (max-width: 767px) {
+    margin-left: 0;
+    padding: 0;
+  }
+}
+
+.cv-link {
+  position: fixed;
+  right: 1rem;
+  z-index: 100;
+  background-color: #1d1d1d;
+  color: #08fdd8;
+  padding: 0.8rem 1.5rem;
+  border: 1px solid #08fdd8;
+  border-top: unset;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  p {
+    margin: 0;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  &:hover {
+    background-color: #08fdd8;
+    color: #1d1d1d;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(8, 253, 216, 0.3);
+  }
+
+  @media (max-width: 768px) {
+    top: 0rem;
+    right: 1rem;
+    padding: 0.6rem 1.2rem;
+
+    p {
+      font-size: 0.8rem;
+    }
+  }
+}

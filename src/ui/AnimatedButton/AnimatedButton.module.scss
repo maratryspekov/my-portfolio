@@ -1,0 +1,51 @@
+.animated_button {
+  position: relative;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  color: rgb(8, 253, 216);
+  background-color: rgb(29, 29, 29);
+  border: 1px solid rgb(8, 253, 216);
+  padding: 0.6em 1.2em;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: color 0.5s, border-color 0.25s, background 0.3s;
+  outline: none;
+  z-index: 1;
+}
+
+.animated_button::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  transform: scaleX(0);
+  transform-origin: 0px 50%;
+  transition-property: transform, -webkit-transform;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+  background: rgb(8, 253, 216);
+}
+
+.animated_button:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.animated_button:hover {
+  color: rgb(29, 29, 29);
+}
+
+.animated_button span {
+  position: relative;
+  z-index: 2;
+}
+
+.animated_button:focus,
+.animated_button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
