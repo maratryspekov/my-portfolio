@@ -195,7 +195,8 @@ export default function Contact() {
 
           <div className={s.contact_form_send_block}>
             <p className={s.text_muted}>
-              Or email me directly at{" "}
+              Or email me directly at
+              <br />
               <a
                 href="mailto:marat.ryspekoff@gmail.com"
                 className={s.accent_link}

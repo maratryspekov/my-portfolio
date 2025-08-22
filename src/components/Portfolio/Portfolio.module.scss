@@ -16,19 +16,20 @@
   max-width: 1000px;
   text-align: center;
 
-  h2 {
+  &__title {
     font-size: 4rem;
     margin-bottom: 2rem;
     color: rgb(8, 253, 216);
+    margin-bottom: 1rem;
 
     @media (max-width: 768px) {
       font-size: 2rem;
     }
   }
 
-  p {
+  &__description {
+    color: #ddd;
     font-size: 1.1rem;
-    color: #ccc;
     line-height: 1.6;
   }
 }

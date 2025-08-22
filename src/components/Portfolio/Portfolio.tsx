@@ -10,7 +10,7 @@ export default function Portfolio() {
           <p className={s["portfolio__description"]}>
             Here is a small gallery of my recent projectscts.
             <span className="">
-              Interested to know more about my work?
+              Interested to know more about my work?&nbsp;
               <a href="#contact" className="accent__link">
                 Contact me!
               </a>

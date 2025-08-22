@@ -19,11 +19,13 @@
     @media (max-width: 767px) {
       font-size: 3rem;
       text-align: center;
+      margin-bottom: 1rem;
     }
 
     @media (max-width: 375px) {
       font-size: 2rem;
       text-align: center;
+      margin-bottom: 1rem;
     }
   }
 }
@@ -127,6 +129,10 @@
 .text_muted {
   color: rgb(141, 141, 141);
   letter-spacing: 0.2rem;
+
+  @media (max-width: 458px) {
+    white-space: nowrap;
+  }
 
   @media (max-width: 375px) {
     display: none;

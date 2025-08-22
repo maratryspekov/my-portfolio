@@ -6,7 +6,7 @@ if (process.env.NODE_ENV !== "production") {
   dotenvConfig({ path: ".env.local" });
 }
 
-/* ---------- helpers ---------- */
+/* helpers*/
 
 function json(res: VercelResponse, status: number, data: unknown) {
   res
@@ -40,7 +40,7 @@ function setCors(req: VercelRequest, res: VercelResponse) {
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
 }
 
-/* ---------- handler ---------- */
+/* handler*/
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   setCors(req, res);

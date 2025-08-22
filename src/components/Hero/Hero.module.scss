@@ -90,14 +90,10 @@
     top: calc(25% + 20.1rem);
     left: 6rem;
 
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       font-size: 1rem;
       top: calc(25% + 12.6rem);
       left: 0;
-      margin-left: 8%;
-    }
-
-    @media (max-width: 375px) {
       margin-left: 0;
     }
   }
@@ -115,7 +111,7 @@
 
     @media (max-width: 768px) {
       left: 0;
-      margin-left: 8%;
+      margin-left: 0;
     }
     @media (max-width: 375px) {
       left: 0;
