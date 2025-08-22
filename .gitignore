@@ -21,6 +21,7 @@ dist
 dist-ssr
 
 # Local environment variables (keep examples)
+.env
 .env.local
 .env.*
 !.env.example
