@@ -29,7 +29,7 @@ export default function Contact() {
     mapInstance.current = map;
 
     map.on("load", () => {
-      // 1) показать Германию целиком
+      // 1) show whole Germany
       const germanyBounds: mapboxgl.LngLatBoundsLike = [
         [5.8663153, 47.2701114], // SW
         [15.0419319, 55.058347], // NE
@@ -39,15 +39,12 @@ export default function Contact() {
         duration: 700,
       });
 
-      // 2) пин в центре Берлина
+      // 2) pin in the center of Berlin
       const berlin: [number, number] = [13.404954, 52.520008];
       const el = document.createElement("div");
       const img = document.createElement("img");
       img.alt = "Berlin";
-      img.src = new URL(
-        "../../assets/images/image-geotag.png",
-        import.meta.url
-      ).href;
+      img.src = new URL("/public/image-geotag.png", import.meta.url).href;
       img.className = s.contact_map_img;
       el.appendChild(img);
 
@@ -55,28 +52,28 @@ export default function Contact() {
         .setLngLat(berlin)
         .addTo(map);
 
-      // на всякий случай после первого рендера
+      // 3) add zoom controls
       map.resize();
     });
 
-    // --- поддержка корректного ресайза карты ---
-    // 1) если контейнер меняет размеры (или возвращается из display:none)
+    // --- correct resize handling ---
+    // 1) if the container changes size (or returns from display:none)
     let ro: ResizeObserver | null = null;
     if (typeof ResizeObserver !== "undefined" && mapRef.current) {
       ro = new ResizeObserver(() => map.resize());
       ro.observe(mapRef.current);
     }
 
-    // 2) при смене брейкпоинта 1023px (когда мы скрываем/показываем .contact_map)
+    // 2) change breakpoint 1023px (when we hide/show .contact_map)
     const mql = window.matchMedia("(max-width: 1023px)");
     const onBPChange = () => {
-      // дождаться применения CSS и перерисовать
+      // wait for CSS to apply and redraw
       requestAnimationFrame(() => map.resize());
     };
     if (mql.addEventListener) mql.addEventListener("change", onBPChange);
-    else mql.addListener(onBPChange); // старые браузеры
+    else mql.addListener(onBPChange); // old browsers
 
-    // 3) общий ресайз окна/ориентации
+    // 3) general window/orientation resize
     const onWinResize = () => map.resize();
     window.addEventListener("resize", onWinResize);
     window.addEventListener("orientationchange", onWinResize);
