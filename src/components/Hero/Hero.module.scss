@@ -7,78 +7,45 @@
 
 .intro {
   height: 100%;
-  position: relative;
   box-sizing: border-box;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
+  padding: 0 6rem;
+  padding-top: 6rem;
+
+  @media (max-width: 1023px) {
+    padding: 4rem 2rem 3rem;
+    align-items: flex-start;
+  }
+  @media (max-width: 767px) {
+    padding: 2rem 8% 2rem 8%;
+    align-items: flex-start;
+  }
+  @media (max-width: 375px) {
+    padding: 1rem 4% 1rem 4%;
+  }
 
   &__header {
     font-size: 6.3rem;
     font-weight: 800;
-    line-height: 6.7rem;
-    position: absolute;
-    left: 6rem;
+    line-height: 1.1;
+    margin-bottom: 1.2rem;
+    white-space: nowrap;
 
+    @media (max-width: 1023px) {
+      font-size: clamp(2.4rem, 7vw, 4.6rem);
+      margin-bottom: 1rem;
+      white-space: normal;
+    }
     @media (max-width: 767px) {
       font-size: 2rem;
-      left: 0;
-      margin: 0 0 0 8%;
+      margin-bottom: 0.7rem;
     }
-
     @media (max-width: 375px) {
       font-size: 1.5rem;
-    }
-
-    &__first-line {
-      top: 25%;
-      padding-top: 1rem;
-      z-index: 3;
-      white-space: nowrap;
-
-      @media (max-width: 768px) {
-        font-size: 1.8rem;
-      }
-
-      @media (max-width: 374px) {
-        font-size: 1.5rem;
-      }
-    }
-
-    &__second-line {
-      top: calc(25% + 6.9rem);
-      z-index: 2;
-      white-space: nowrap;
-
-      @media (max-width: 768px) {
-        font-size: 2.5rem;
-        top: calc(25% + 4.2rem);
-      }
-
-      @media (max-width: 375px) {
-        font-size: 1.5rem;
-      }
-    }
-
-    &__third-line {
-      top: calc(25% + 13.6rem);
-      padding: 0 1rem 1rem 0;
-      z-index: 1;
-      white-space: nowrap;
-      overflow: hidden;
-
-      & span {
-        display: inline;
-      }
-
-      @media (max-width: 768px) {
-        font-size: 2rem;
-        top: calc(25% + 8.4rem);
-      }
-
-      @media (max-width: 375px) {
-        font-size: 1.5rem;
-        white-space: nowrap;
-      }
+      margin-bottom: 0.5rem;
     }
   }
 
@@ -86,15 +53,22 @@
     font-size: 1.2rem;
     opacity: 0.9;
     color: #ccc;
-    position: absolute;
-    top: calc(25% + 20.1rem);
-    left: 6rem;
+    margin-bottom: 2.5rem;
 
     @media (max-width: 767px) {
       font-size: 1rem;
-      top: calc(25% + 12.6rem);
-      left: 0;
-      margin-left: 0;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__contact {
+    margin-bottom: 6rem;
+
+    @media (max-width: 767px) {
+      margin-bottom: 4rem;
+    }
+    @media (max-width: 375px) {
+      margin-bottom: 2rem;
     }
   }
 
@@ -104,36 +78,11 @@
     padding: 0.7rem 1.4rem 0.5rem;
   }
 
-  &__contact {
-    position: absolute;
-    bottom: 8rem;
-    left: 6rem;
-
-    @media (max-width: 768px) {
-      left: 0;
-      margin-left: 0;
-    }
-    @media (max-width: 375px) {
-      left: 0;
-      margin-left: 0;
-    }
-  }
-
   &__scroll {
     background-color: #1d1d1d;
-    position: absolute;
-    bottom: 1rem;
+    align-self: center;
+    margin-top: auto;
     cursor: pointer;
-    left: 50%;
-    transform: translateX(-50%);
-
-    @media (max-width: 768px) {
-      left: 0;
-      margin-left: 8%;
-      left: 50%;
-      transform: translateX(-50%);
-      margin-left: 0;
-    }
 
     img {
       width: 6rem;
@@ -157,47 +106,6 @@
       box-sizing: border-box;
       transition: opacity 0.5s ease;
     }
-  }
-}
-
-@media (max-width: 1023px) {
-  .intro {
-    display: grid;
-    grid-auto-rows: min-content;
-    align-content: center;
-    padding: 4rem 2rem 3rem;
-    justify-content: flex-start;
-  }
-
-  .intro__header {
-    position: static;
-    left: auto;
-    font-size: clamp(2.4rem, 7vw, 4.6rem);
-    line-height: 1.1;
-    margin: 0;
-  }
-
-  .intro__header__first-line,
-  .intro__header__second-line,
-  .intro__header__third-line {
-    position: static;
-    top: auto;
-    padding: 0;
-    white-space: normal;
-  }
-
-  .intro__description {
-    position: static;
-    margin-top: 1rem;
-    left: auto;
-    top: auto;
-  }
-
-  .intro__contact {
-    position: static;
-    margin-top: 2rem;
-    left: auto;
-    bottom: auto;
   }
 }
 

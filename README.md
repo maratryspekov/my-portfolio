@@ -1,67 +1,111 @@
-# React + TypeScript + Vite
+# Marat Ryspekov Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio website built with **React**, **TypeScript**, **Vite**, and **SCSS**.
 
-Currently, two official plugins are available:
+Includes animated sections, a project gallery, a Mapbox map, and a serverless contact form.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Live: https://marat-portfolio.vercel.app
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Responsive layout (mobile → desktop)
+- Smooth animations (AOS / Framer Motion)
+- Serverless Contact Form (Vercel Function + Nodemailer)
+- Mapbox GL interactive map
+- Project gallery & skills sections
+- Clean, modular SCSS with CSS Modules
+- Deployed on Vercel
 
-```js
-export default tseslint.config([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
+## Technologies
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- React + TypeScript
+- Vite (build/dev)
+- SCSS Modules
+- React Router
+- AOS, Framer Motion
+- Mapbox GL JS
+- Nodemailer (via Vercel serverless function)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+## Getting Started
+
+Clone the repository and install dependencies:
+
+```sh
+git clone https://github.com/Marat-Vodochka/my-portfolio.git
+cd my-portfolio
+npm install
 ```
 
-```js
-// eslint.config.js
-import reactX from "eslint-plugin-react-x";
-import reactDom from "eslint-plugin-react-dom";
+Run the development server:
 
-export default tseslint.config([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs["recommended-typescript"],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+```sh
+npm run dev
 ```
+
+Build for production:
+
+```sh
+npm run build
+```
+
+## Environment Variables
+
+Create a .env.local in the project root for local development:
+
+# Mapbox (frontend, exposed to client)
+
+VITE_MAPBOX_TOKEN=your_public_mapbox_token
+
+# Email (used only by the serverless function)
+
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=465
+SMTP_SECURE=true
+SMTP_USER=your-email@gmail.com
+SMTP_PASS=your-app-password
+FROM_EMAIL=your-email@gmail.com
+TO_EMAIL=your-email@gmail.com
+
+## Project Structure
+
+my-portfolio/
+├─ api/
+│ └─ contact.ts # Vercel Serverless Function (/api/contact)
+├─ public/
+│ ├─ favicon.png
+│ ├─ favicon-white.png
+│ └─ image-geotag.png
+├─ src/
+│ ├─ assets/ # images & icons
+│ ├─ components/ # sections: About, BaseLayout, Contact, Hero, NavMenu, Portfolio, Section, Skills…
+│ ├─ ui/ # reusable UI components (AnimatedButton, AnimatedLetters, Input)
+│ ├─ App.tsx
+│ ├─ main.tsx
+│ ├─ App.css
+│ ├─ index.css
+│ └─ global.d.ts # global types/declarations
+├─ index.html
+├─ vite.config.ts
+├─ tsconfig.json
+└─ .env.local # local env vars (do NOT commit)
+
+## Scripts
+
+```json
+{
+  "dev": "vite",
+  "build": "vite build",
+  "preview": "vite preview",
+  "typecheck": "tsc --noEmit",
+  "lint": "eslint ."
+}
+```
+
+## Contact
+
+Feel free to reach out via the contact form or email:  
+[marat.ryspekoff@gmail.com](mailto:marat.ryspekoff@gmail.com)
+
+---
+
+Portfolio by Marat Ryspekov
