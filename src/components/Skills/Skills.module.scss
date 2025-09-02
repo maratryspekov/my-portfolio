@@ -1,7 +1,7 @@
-.skills-section {
-  /* flexible paddings  */
-  padding: clamp(1.25rem, 2vw, 2rem) 1rem;
-}
+// .skills-section {
+//   /* flexible paddings  */
+//   padding: clamp(1.25rem, 2vw, 2rem) 1rem;
+// }
 
 .skills {
   /* 2 colons */
@@ -9,7 +9,8 @@
   grid-template-columns: 1fr minmax(280px, 420px);
   align-items: center;
   gap: clamp(1rem, 6vw, 6rem);
-  padding: clamp(1rem, 2.5vw, 2rem) 1rem;
+  padding: 2rem 0;
+  // padding: clamp(1rem, 2.5vw, 2rem) 1rem;
 
   @media (max-width: 1110px) {
     grid-template-columns: 1fr;
@@ -39,7 +40,6 @@
   }
 
   &__title {
-    /* flexible title */
     font-size: 4rem;
     color: #fff;
     margin: 0 0 1rem;
@@ -76,7 +76,10 @@
       margin: 0 auto;
     }
 
-    @media (max-width: 680px) {
+    @media (max-width: 517px) {
+      grid-template-columns: 1fr;
+    }
+    @media (max-width: 374px) {
       grid-template-columns: 1fr;
     }
   }
@@ -90,11 +93,6 @@
     background-color: #2d2d2d;
     display: flex;
     flex-direction: column;
-
-    @media (max-width: 375px) {
-      max-width: 4.5rem;
-      padding: 0.5rem 0.4rem;
-    }
 
     @media (max-width: 374px) {
       padding: 0;

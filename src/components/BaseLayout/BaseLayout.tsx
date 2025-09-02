@@ -11,7 +11,11 @@ export default function BaseLayout({ children }: BaseLayoutProps) {
     <>
       <NavMenu />
       <main className={s.container}>
-        <a href="/public/Ryspekov_CV.pdf" target="_blank" rel="noreferrer">
+        <a
+          href="/public/Marat_Ryspekov_CV.pdf"
+          target="_blank"
+          rel="noreferrer"
+        >
           <div className={s["cv-link"]}>
             <p>View My CV</p>
           </div>

@@ -56,9 +56,11 @@
     background-color: #2d2d2d;
     border: none;
     resize: none;
+    color: #fff;
 
     &::placeholder {
       font-size: 1rem;
+      color: #aaa;
     }
 
     &_email {
