@@ -37,10 +37,10 @@ export default function Portfolio() {
               loading="lazy"
               decoding="async"
             />
-            <a className={s["portfolio__cards-item-description"]}>
+            <div className={s["portfolio__cards-item-description"]}>
               <h3>Marusya</h3>
               <p>Cinema guide · React, TypeScript, Vite</p>
-            </a>
+            </div>
           </a>
 
           <a
