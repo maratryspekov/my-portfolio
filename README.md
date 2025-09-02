@@ -95,11 +95,11 @@ npm run lint - Run ESLint
 ## 🌐 Live Deployment
 
 The portfolio is deployed on Vercel and available at:
-👉 https://marat-portfolio.vercel.app
+👉 https://ryspekoff.de
 
 ## 📫 Contact Me
 
-- **Portfolio:** marat-portfolio.vercel.app
+- **Portfolio:** ryspekoff.de
 - **Email:** marat.ryspekoff@gmail.com
 - **GitHub:** Marat-Vodochka
 
