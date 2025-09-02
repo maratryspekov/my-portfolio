@@ -1,8 +1,10 @@
-# Marat Ryspekov Portfolio
+# 🚀 Marat Ryspekov - Frontend Developer Portfolio
 
-Personal portfolio website built with **React**, **TypeScript**, **Vite**, and **SCSS**.
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Visit%20Site-brightgreen?style=for-the-badge&logo=vercel)](https://marat-portfolio.vercel.app)
+[![Built with Vite](https://img.shields.io/badge/Built%20with-Vite-646CFF?style=for-the-badge&logo=vite)](https://vitejs.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 
-Includes animated sections, a project gallery, a Mapbox map, and a serverless contact form.
+A modern, responsive portfolio website showcasing my projects and skills as a Frontend Developer. Built with performance and user experience in mind.
 
 Live: https://marat-portfolio.vercel.app
 
@@ -68,44 +70,37 @@ TO_EMAIL=your-email@gmail.com
 
 ## Project Structure
 
-my-portfolio/
-├─ api/
-│ └─ contact.ts # Vercel Serverless Function (/api/contact)
-├─ public/
-│ ├─ favicon.png
-│ ├─ favicon-white.png
-│ └─ image-geotag.png
-├─ src/
-│ ├─ assets/ # images & icons
-│ ├─ components/ # sections: About, BaseLayout, Contact, Hero, NavMenu, Portfolio, Section, Skills…
-│ ├─ ui/ # reusable UI components (AnimatedButton, AnimatedLetters, Input)
-│ ├─ App.tsx
-│ ├─ main.tsx
-│ ├─ App.css
-│ ├─ index.css
-│ └─ global.d.ts # global types/declarations
-├─ index.html
-├─ vite.config.ts
-├─ tsconfig.json
-└─ .env.local # local env vars (do NOT commit)
+src/
+├── components/ # React components (sections)
+├── ui/ # Reusable UI components
+├── assets/ # Images and icons
+├── App.tsx # Main application component
+├── main.tsx # Application entry point
+└── \*.css Global styles
+api/
+└── contact.ts # Vercel serverless function
 
-## Scripts
+## 📜 Available Scripts
 
-```json
-{
-  "dev": "vite",
-  "build": "vite build",
-  "preview": "vite preview",
-  "typecheck": "tsc --noEmit",
-  "lint": "eslint ."
-}
-```
+npm run dev - Start development server
 
-## Contact
+npm run build - Build for production
 
-Feel free to reach out via the contact form or email:  
-[marat.ryspekoff@gmail.com](mailto:marat.ryspekoff@gmail.com)
+npm run preview - Preview production build
 
----
+npm run typecheck - Run TypeScript compiler
+
+npm run lint - Run ESLint
+
+## 🌐 Live Deployment
+
+The portfolio is deployed on Vercel and available at:
+👉 https://marat-portfolio.vercel.app
+
+## 📫 Contact Me
+
+- **Portfolio:** marat-portfolio.vercel.app
+- **Email:** marat.ryspekoff@gmail.com
+- **GitHub:** Marat-Vodochka
 
 Portfolio by Marat Ryspekov
