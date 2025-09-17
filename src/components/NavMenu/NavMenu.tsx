@@ -105,7 +105,7 @@ function NavMenu() {
           </div>
           <div className={s["main-menu__links-item"]}>
             <a
-              href="https://github.com/Marat-Vodochka"
+              href="https://github.com/maratryspekov"
               target="_blank"
               rel="noreferrer"
               onClick={closeMenu}
