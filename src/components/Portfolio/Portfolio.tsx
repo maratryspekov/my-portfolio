@@ -2,7 +2,7 @@ import s from "./Portfolio.module.scss";
 import Section from "../Section/Section";
 import MarusyaLogo from "../../assets/images/icon-marusya.svg";
 import BriatonLogo from "../../assets/images/icon-briaton.svg";
-import BulevardLogo from "../../assets/images/icon-bulevard.svg";
+import AirNowLogo from "../../assets/images/icon-airnow.svg";
 
 export default function Portfolio() {
   return (
@@ -65,21 +65,21 @@ export default function Portfolio() {
 
           <a
             className={s["portfolio__cards-item"]}
-            href="https://tishinsky-boulevard.vercel.app/"
+            href="https://air-now-sepia.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
-            title="Open Tishinsky Boulevard in a new tab"
+            title="Open Air Now demo in a new tab"
           >
             <img
-              className={`${s["portfolio__cards-item-img"]} ${s.bulevard}`}
-              src={BulevardLogo}
+              className={`${s["portfolio__cards-item-img"]} ${s.airnow}`}
+              src={AirNowLogo}
               alt=""
               loading="lazy"
               decoding="async"
             />
             <div className={s["portfolio__cards-item-description"]}>
-              <h3>Tishinsky Boulevard</h3>
-              <p>Real-estate landing · HTML, SCSS (Sass), CSS Modules</p>
+              <h3>Air Now</h3>
+              <p>Air quality monitoring · React, TypeScript, API integration</p>
             </div>
           </a>
         </div>

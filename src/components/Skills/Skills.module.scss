@@ -7,15 +7,24 @@
   /* 2 colons */
   display: grid;
   grid-template-columns: 1fr minmax(280px, 420px);
-  align-items: center;
+  align-items: flex-start;
   gap: clamp(1rem, 6vw, 6rem);
   padding: 2rem 0;
+  max-width: 1400px; // Maximum width for large screens
+  margin: 0 auto; // Centering on large screens
   // padding: clamp(1rem, 2.5vw, 2rem) 1rem;
+
+  // Styles for very large screens
+  @media (min-width: 1400px) {
+    padding: 2rem 2rem;
+    gap: 8rem;
+  }
 
   @media (max-width: 1110px) {
     grid-template-columns: 1fr;
     justify-items: center;
     gap: clamp(1.25rem, 4vw, 2rem);
+    align-items: center;
   }
 
   @media (max-width: 1024px) {
@@ -31,11 +40,16 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    align-self: flex-start;
 
     @media (max-width: 767px) {
       align-items: center;
       text-align: center;
       margin-bottom: 1rem;
+    }
+
+    @media (min-width: 1400px) {
+      max-width: 52rem;
     }
   }
 
@@ -47,7 +61,11 @@
 
     @media (max-width: 374px) {
       font-size: 2rem;
-      taxt-align: center;
+      text-align: center;
+    }
+
+    @media (min-width: 1400px) {
+      font-size: 4.5rem;
     }
   }
 
@@ -63,14 +81,21 @@
       text-align: left;
       max-width: 42rem;
     }
+
+    // For large screens
+    @media (min-width: 1400px) {
+      max-width: 50rem;
+      font-size: 1.1rem;
+    }
   }
 
   &__cards {
     width: 100%;
     max-width: 33rem;
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 colons */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1rem;
+    align-self: flex-start;
 
     @media (max-width: 1110px) {
       margin: 0 auto;
@@ -81,6 +106,12 @@
     }
     @media (max-width: 374px) {
       grid-template-columns: 1fr;
+    }
+
+    // For large screens
+    @media (min-width: 1400px) {
+      max-width: 36rem;
+      gap: 1.5rem;
     }
   }
 
@@ -101,12 +132,22 @@
       width: 100%;
     }
 
+    // For large screens
+    @media (min-width: 1400px) {
+      padding: 1.5rem;
+    }
+
     &-heading {
       font-size: clamp(1.05rem, 1.6vw, 1.2rem);
       letter-spacing: 1px;
       text-align: center;
       color: #fff;
       margin: 0 0 1rem;
+
+      // For large screens
+      @media (min-width: 1400px) {
+        font-size: 1.3rem;
+      }
     }
 
     &-list {
@@ -125,6 +166,11 @@
         display: flex;
         flex-direction: row;
       }
+
+      // For large screens
+      @media (min-width: 1400px) {
+        gap: 1rem;
+      }
     }
 
     &-item {
@@ -142,17 +188,34 @@
         padding: 0;
       }
 
+      // For large screens
+      @media (min-width: 1400px) {
+        max-width: 7rem;
+        padding: 1rem;
+      }
+
       &-icon {
         width: clamp(1.6rem, 2.5vw, 2rem);
         height: clamp(1.6rem, 2.5vw, 2rem);
         margin-bottom: 0.7rem;
         object-fit: contain;
+
+        // For large screens
+        @media (min-width: 1400px) {
+          width: 2.5rem;
+          height: 2.5rem;
+        }
       }
 
       &-name {
         color: #ccc;
         margin: 0;
         font-size: clamp(0.85rem, 1.4vw, 0.95rem);
+
+        // For large screens
+        @media (min-width: 1400px) {
+          font-size: 1rem;
+        }
       }
     }
   }
@@ -164,6 +227,11 @@
 
     @media (max-width: 1110px) {
       display: none;
+    }
+
+    // For large screens
+    @media (min-width: 1400px) {
+      max-width: 28rem;
     }
 
     img {

@@ -1,6 +1,13 @@
 /* Layout */
 .contact_section {
   box-sizing: border-box;
+  max-width: 1400px; // Maximum width for large screens
+  margin: 0 auto; // Centering on large screens
+  
+  // For large screens
+  @media (min-width: 1400px) {
+    padding: 0 2rem;
+  }
 }
 
 .contact {
@@ -27,6 +34,12 @@
       text-align: center;
       margin-bottom: 1rem;
     }
+
+    // For large screens
+    @media (min-width: 1400px) {
+      font-size: 4.5rem;
+      margin-bottom: 2.5rem;
+    }
   }
 }
 
@@ -38,10 +51,20 @@
   max-width: 30rem;
   width: 100%;
 
+  // For large screens
+  @media (min-width: 1400px) {
+    max-width: 35rem;
+  }
+
   &_group {
     display: flex;
     align-items: center;
     gap: 5px;
+
+    // For large screens
+    @media (min-width: 1400px) {
+      gap: 8px;
+    }
 
     input {
       flex: 1;
@@ -58,13 +81,31 @@
     resize: none;
     color: #fff;
 
+    // For large screens
+    @media (min-width: 1400px) {
+      font-size: 1.1rem;
+      padding: 1rem 0.8rem 0.6rem;
+      margin-bottom: 0.7rem;
+      border-radius: 4px;
+    }
+
     &::placeholder {
       font-size: 1rem;
       color: #aaa;
+
+      // For large screens
+      @media (min-width: 1400px) {
+        font-size: 1.1rem;
+      }
     }
 
     &_email {
       margin-left: 0.5rem;
+
+      // For large screens
+      @media (min-width: 1400px) {
+        margin-left: 0.7rem;
+      }
     }
   }
 
@@ -77,14 +118,32 @@
       gap: 8px;
     }
 
+    // For large screens
+    @media (min-width: 1400px) {
+      gap: 1rem;
+    }
+
     p,
     a {
       font-size: 0.8rem;
       letter-spacing: 1px;
+
+      // For large screens
+      @media (min-width: 1400px) {
+        font-size: 0.9rem;
+        letter-spacing: 1.2px;
+      }
     }
+    
     p {
       width: 40%;
       line-height: 1;
+
+      // For large screens
+      @media (min-width: 1400px) {
+        width: 45%;
+        line-height: 1.2;
+      }
     }
 
     button {
@@ -94,6 +153,12 @@
       display: flex;
       align-items: center;
       justify-content: center;
+
+      // For large screens
+      @media (min-width: 1400px) {
+        padding: 0.8rem 1.3rem;
+        font-size: 1rem;
+      }
     }
   }
 }
@@ -106,8 +171,19 @@
   height: 100%;
   margin-left: 0.5rem;
 
+  // For large screens
+  @media (min-width: 1400px) {
+    max-width: 45rem;
+    margin-left: 1rem;
+  }
+
   a {
     font-size: 0.7rem;
+
+    // For large screens
+    @media (min-width: 1400px) {
+      font-size: 0.8rem;
+    }
   }
 }
 
@@ -118,6 +194,12 @@
   display: block;
   filter: invert(54%) sepia(98%) saturate(500%) hue-rotate(80deg)
     brightness(120%) contrast(110%);
+
+  // For large screens
+  @media (min-width: 1400px) {
+    width: 35px;
+    height: 35px;
+  }
 }
 
 /* Utils*/
@@ -140,6 +222,12 @@
     display: none;
     font-size: 0.5rem;
     white-space: nowrap;
+  }
+
+  // For large screens
+  @media (min-width: 1400px) {
+    letter-spacing: 0.25rem;
+    font-size: 0.9rem;
   }
 }
 
