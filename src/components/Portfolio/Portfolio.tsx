@@ -3,6 +3,7 @@ import Section from "../Section/Section";
 import MarusyaLogo from "../../assets/images/icon-marusya.svg";
 import BriatonLogo from "../../assets/images/icon-briaton.svg";
 import AirNowLogo from "../../assets/images/icon-airnow.svg";
+import ChicaGroomLogo from "../../assets/images/icon-chica-groom.ico";
 
 export default function Portfolio() {
   return (
@@ -80,6 +81,29 @@ export default function Portfolio() {
             <div className={s["portfolio__cards-item-description"]}>
               <h3>Air Now</h3>
               <p>Air quality monitoring · React, TypeScript, API integration</p>
+            </div>
+          </a>
+
+          <a
+            className={s["portfolio__cards-item"]}
+            href="https://chica-groom.vercel.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Open Chica Groom demo in a new tab"
+          >
+            <img
+              className={`${s["portfolio__cards-item-img"]} ${s.chicagroom}`}
+              src={ChicaGroomLogo}
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
+            <div className={s["portfolio__cards-item-description"]}>
+              <h3>Chica Groom</h3>
+              <p>
+                Dog grooming salon · React, TypeScript, Node.js, i18n, Telegram
+                API
+              </p>
             </div>
           </a>
         </div>

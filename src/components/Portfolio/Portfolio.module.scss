@@ -188,3 +188,14 @@
     padding: 0 2.5rem;
   }
 }
+
+.chicagroom {
+  background: linear-gradient(135deg, #d4a574 0%, #8b6f47 100%);
+  object-fit: contain;
+  padding: 0 2rem;
+
+  // For large screens
+  @media (min-width: 1400px) {
+    padding: 0 2.5rem;
+  }
+}
