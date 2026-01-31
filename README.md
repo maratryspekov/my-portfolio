@@ -100,8 +100,6 @@ The portfolio is deployed on Vercel and available at:
 
 ## 📫 Contact Me
 
-- **Portfolio:** ryspekoff.de
-- **Email:** marat.ryspekoff@gmail.com
-- **GitHub:** maratryspekov
+📫 Contact: via **[LinkedIn](https://www.linkedin.com/in/marat-ryspekov-231297221/)** or **[Portfolio](https://ryspekoff.de/)**.
 
 Portfolio by Marat Ryspekov
