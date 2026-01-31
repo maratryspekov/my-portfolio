@@ -55,7 +55,7 @@ export default function AnimatedLetters({
             data-aos-delay={startDelay + i * step}
             data-aos-duration={duration}
             data-aos-easing={easing}
-            style={{ ["--i" as any]: i } as React.CSSProperties}
+            style={{ "--i": i } as React.CSSProperties}
           >
             {isSpace ? "\u00A0" : ch}
           </span>

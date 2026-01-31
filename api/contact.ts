@@ -19,9 +19,9 @@ function escapeHtml(str = "") {
   return String(str).replace(
     /[&<>"']/g,
     (m) =>
-      ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[
+      ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[
         m
-      ]!)
+      ]!,
   );
 }
 
@@ -106,18 +106,23 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
           <p><b>Subject:</b> ${escapeHtml(subject || "(no subject)")}</p>
           <hr/>
           <pre style="white-space:pre-wrap;margin:0">${escapeHtml(
-            message
+            message,
           )}</pre>
         </div>
       `,
     });
 
     return json(res, 200, { ok: true });
-  } catch (err: any) {
+  } catch (err: unknown) {
+    const error = err as {
+      code?: string;
+      message?: string;
+      response?: unknown;
+    };
     console.error("sendMail error:", {
-      code: err?.code,
-      msg: err?.message,
-      response: err?.response,
+      code: error.code,
+      msg: error.message,
+      response: error.response,
     });
     return json(res, 500, { ok: false, error: "Mail service error" });
   }

@@ -3,6 +3,7 @@
 [![Live Demo](https://img.shields.io/badge/Live_Demo-Visit%20Site-brightgreen?style=for-the-badge&logo=vercel)](https://marat-portfolio.vercel.app)
 [![Built with Vite](https://img.shields.io/badge/Built%20with-Vite-646CFF?style=for-the-badge&logo=vite)](https://vitejs.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![CI](https://github.com/maratryspekov/my-portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/maratryspekov/my-portfolio/actions/workflows/ci.yml)
 
 A modern, responsive portfolio website showcasing my projects and skills as a Frontend Developer. Built with performance and user experience in mind.
 
@@ -33,7 +34,7 @@ Live: https://marat-portfolio.vercel.app
 Clone the repository and install dependencies:
 
 ```sh
-git clone https://github.com/Marat-Vodochka/my-portfolio.git
+git clone https://github.com/maratryspekov/my-portfolio.git
 cd my-portfolio
 npm install
 ```

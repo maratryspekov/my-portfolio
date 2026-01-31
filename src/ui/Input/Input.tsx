@@ -17,7 +17,7 @@ function Input({
 }: InputProps) {
   return (
     <input
-      className={styles.input}
+      className={`${styles.input} ${className}`}
       type={type}
       placeholder={placeholder}
       required={required}

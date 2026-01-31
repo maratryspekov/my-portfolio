@@ -15,7 +15,7 @@ export default function Contact() {
   const mapInstance = useRef<mapboxgl.Map | null>(null);
 
   const [status, setStatus] = useState<"idle" | "loading" | "sent" | "error">(
-    "idle"
+    "idle",
   );
   const [errMsg, setErrMsg] = useState("");
 
@@ -129,7 +129,7 @@ export default function Contact() {
         setStatus("error");
         setErrMsg(json?.error || "Failed to send");
       }
-    } catch (err) {
+    } catch {
       setStatus("error");
       setErrMsg("Network error");
     }
@@ -217,8 +217,8 @@ export default function Contact() {
               {status === "loading"
                 ? "Sending..."
                 : status === "sent"
-                ? "Sent!"
-                : "Send"}
+                  ? "Sent!"
+                  : "Send"}
             </AnimatedButton>
           </div>
 
